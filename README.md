@@ -130,4 +130,4 @@ Pro tips: if you need a project wide type checking with TypeScript, you can run 
 Feel free to open an issue if you have question or found a bug. Totally open to any suggestions and improvements.
 
 ---
-Made with ♥ by [Devspherelabs | Themealchemy](https://www.themealchemy.com)
+Made with ♥ by [Nick Web Project](https://www.nickwebproject.com)
