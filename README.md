@@ -57,7 +57,7 @@ Then, you can run locally in development mode with live reload:
 pnpm dev or yarn dev
 ```
 
-Open http://localhost:3000 with your favorite browser to see your project.
+Open http://localhost:3009 with your favorite browser to see your project.
 
 ### Customization
 
@@ -103,7 +103,7 @@ It generates an optimized production build of the boilerplate. For testing the g
 $ pnpm start or yarn start
 ```
 
-The command starts a local server with the production build. Then, you can now open http://localhost:3000 with your favorite browser to see the project.
+The command starts a local server with the production build on port 3009. Then, you can now open http://localhost:3009 with your favorite browser to see the project.
 
 ### Deploy to Netlify
 
