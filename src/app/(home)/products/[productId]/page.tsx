@@ -9,18 +9,16 @@ import { products } from '@/data/content';
 import ButtonLink from '@/shared/Button/ButtonLink';
 
 type Props = {
-  params: { productId: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ productId: string }>;
 };
 
 const getProductData = (slug: string) => {
   return products.find((item) => item.slug === slug);
 };
 
-const page = (props: Props) => {
-  const selectedProduct = getProductData(
-    pathOr('', ['params', 'productId'], props),
-  );
+const page = async ({ params }: Props) => {
+  const { productId } = await params;
+  const selectedProduct = getProductData(productId);
 
   const breadcrumbItems = [
     { title: <ButtonLink href="/">Home</ButtonLink> },

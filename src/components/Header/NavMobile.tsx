@@ -51,16 +51,16 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
       <div className="py-10">
         <ButtonPrimary className="w-full">Log in</ButtonPrimary>
         <p className="mt-4 text-center">
-          No account yet?{" "}
+          No account yet?{' '}
           <Link href="/account/signup" className="underline">
             Create Account
           </Link>
         </p>
         <ul className="flex mt-10 justify-center gap-8 text-lg">
-        {socialLinks.map((listItem) => (
+          {socialLinks.map((listItem) => (
             <li>
-              <Link className="text-lg" href={pathOr("#", ["href"], listItem)}>
-                {pathOr(<></>, ["Icon"], listItem)}
+              <Link className="text-lg" href={pathOr('#', ['href'], listItem)}>
+                {pathOr(<></>, ['Icon'], listItem)}
               </Link>
             </li>
           ))}

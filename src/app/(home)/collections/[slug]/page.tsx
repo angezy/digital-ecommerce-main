@@ -1,5 +1,3 @@
-import { pathOr } from 'ramda';
-import type { FC } from 'react';
 import React from 'react';
 
 import CollectionHeader from '@/components/collections/CollectionHeader';
@@ -12,10 +10,10 @@ import PopluarCategoriesSection from '@/components/home/sections/PopluarCategori
 import { categoriesData } from '@/data/content';
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
-const CollectionPage: FC<PageProps> = ({ params }) => {
-  const slug = pathOr('', ['slug'], params);
+const CollectionPage = async ({ params }: PageProps) => {
+  const { slug } = await params;
 
   const catalogData = categoriesData.find((item) => item.slug === slug);
   return (

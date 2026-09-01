@@ -7,27 +7,27 @@ import React from 'react';
 import { Providers } from './providers';
 
 export const metadata: Metadata = {
-    title: `Nick's Store`,
+  title: `Nick's Store`,
   icons: [
     {
-          rel: 'NicksStore',
-          url: '/NicksStore.png',
+      rel: 'NicksStore',
+      url: '/NicksStore.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-        url: '/NicksStore.png',
+      url: '/NicksStore.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-        url: '/NicksStore.png',
+      url: '/NicksStore.png',
     },
     {
       rel: 'icon',
-        url: '/NicksStore.png',
+      url: '/NicksStore.png',
     },
   ],
 };
