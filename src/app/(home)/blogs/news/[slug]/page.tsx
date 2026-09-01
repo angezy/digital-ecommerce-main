@@ -1,5 +1,4 @@
 import { pathOr } from 'ramda';
-import type { FC } from 'react';
 import React from 'react';
 
 import SectionBlogBody from '@//components/blog/SectionBlogBody';
@@ -11,16 +10,16 @@ import ButtonLink from '@/shared/Button/ButtonLink';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 
 type PageProps = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>;
 };
 
 const getBlogData = (slug: string) => {
   return blogs.find((item) => item.slug === slug);
 };
 
-const page: FC<PageProps> = ({ params }) => {
-  const selectedBlog = getBlogData(pathOr('', ['slug'], params));
+const page = async ({ params }: PageProps) => {
+  const { slug } = await params;
+  const selectedBlog = getBlogData(slug);
 
   const breadcrumbItems = [
     { title: <ButtonLink href="/">Home</ButtonLink> },
